@@ -33,6 +33,7 @@ PyTorch > ONNX > Tensorflow > Tensorflow-Lite
 PyTorch > ONNX > Tensorflow > Tensorflow-Lite
 ```
 - Here, we used ```onnx2tf``` library which take care of the input shape issue between ONNX and TF
+- In this case, the converted model requires a channel-last (NHWC) input shape
 
 ### torch2tflite_openvino.py
 - Conversion process:
