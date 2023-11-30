@@ -24,7 +24,7 @@ PyTorch > ONNX > Tensorflow > Tensorflow-Lite
 ```
 - Conversion from ONNX to Tensorflow is done using the ```onnx-tf``` library which is officially maintained by ONNX
 - However, it generates many unnecessary ```transpose``` ops before and after each ```Conv``` op
-- In addition, the input shape remains the same after conversion (i.e., NCHW input for TF model)
+- Thus, the input shape remains the same after conversion (i.e., NCHW input for TF model)
 
 
 ### torch2tflite_nhwc.py _**(RECOMMENDED)**_
