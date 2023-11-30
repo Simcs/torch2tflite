@@ -13,7 +13,7 @@ Convert PyTorch model to Tensorflow-Lite model with relevant quantizations
 
 _**IMPORTANT:**_ The input shape of the ```Conv``` module is different for each framework
 ```
-- Channel-first(NCHW) : PyTorch, ONNX
+- Channel-first(NCHW) : PyTorch, ONNX, OpenVINO
 - Channel-last (NHWC) : Tensorflow
 ```
 
