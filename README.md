@@ -9,13 +9,15 @@ Convert PyTorch model to Tensorflow-Lite model with relevant quantizations
 - openvino == 2023.2.0
 - tensorflow == 2.14.0
 
+## Descriptions
+
 _**IMPORTANT:**_ The input shape of the ```Conv``` module is different for each framework
 ```
 - Channel-first(NCHW) : PyTorch, ONNX
 - Channel-last (NHWC) : Tensorflow
 ```
 
-## torch2tflite_nchw.py
+### torch2tflite_nchw.py
 - Conversion process:
 ```
 PyTorch > ONNX > Tensorflow > Tensorflow-Lite
@@ -25,14 +27,14 @@ PyTorch > ONNX > Tensorflow > Tensorflow-Lite
 - In addition, the input shape remains the same after conversion (i.e., NCHW input for TF model)
 
 
-## torch2tflite_nhwc.py _**(RECOMMENDED)**_
+### torch2tflite_nhwc.py _**(RECOMMENDED)**_
 - Conversion process:
 ```
 PyTorch > ONNX > Tensorflow > Tensorflow-Lite
 ```
 - Here, we used ```onnx2tf``` library which take care of the input shape issue between ONNX and TF
 
-## torch2tflite_openvino.py
+### torch2tflite_openvino.py
 - Conversion process:
 ```
 PyTorch > ONNX > OpenVINO > Tensorflow > Tensorflow-Lite
